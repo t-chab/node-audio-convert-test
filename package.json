@@ -1,0 +1,17 @@
+{
+  "name": "node-audio-convert-test",
+  "version": "0.0.1",
+  "description": "Simple Express http server to convert audio files to 128k mp3",
+  "main": "index.js",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.0.0-rc3",
+    "express": "^4.11.1",
+    "jade": "^1.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

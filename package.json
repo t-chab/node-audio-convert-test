@@ -14,14 +14,17 @@
   },
   "dependencies": {
     "fluent-ffmpeg": "^2.0.0-rc3",
-    "express": "^4.11.1",
-    "jade": "^1.9.1",
-    "javascript-brunch": ">= 1.0 < 1.8",
-    "css-brunch": ">= 1.0 < 1.8",
-    "uglify-js-brunch": ">= 1.0 < 1.8",
-    "clean-css-brunch": ">= 1.0 < 1.8",
-    "auto-reload-brunch": ">= 1.0 < 1.8"
+    "express": "*",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*"
   },
-  "license": "GPL-3.0+"
+  "license": "GPL-3.0+",
+  "devDependencies": {
+    "morgan": "^1.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tchabaud/node-audio-convert-test"
+  }
 }
-

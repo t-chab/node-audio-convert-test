@@ -1,21 +1,16 @@
 var express = require('express'),
     fs = require('fs'),
     path = require('path'),
-    app = express.createServer(),
-    ffmpeg = require('../index');
+    app = express();
+    var ffmpeg = require('fluent-ffmpeg/index');
 
 var PORT = 8080,
-    NUM_FILES = 0,
     MAX_SIZE = 200 * 1024 * 1024,
     EXTENSIONS = ['wav', 'wma', 'flac'];
 
-app.get('/', function (req, res) {
-    res.send('index.html');
-});
-
 app.post('/mp3', function (req, res) {
     res.contentType('audio/mpeg');
-    res.contentDisposition('filename="file.mp3"');
+    res.attachment('filename="file.mp3"');
 
     var name = req.headers['x-filename'];
     if (!name) {
@@ -75,8 +70,9 @@ app.post('/mp3', function (req, res) {
     });
 
     req.on('end', function () {
+        console.log('File Upload ended');
         file.end();
-        var proc = ffmpeg(filePath)
+        ffmpeg(filePath)
             // set audio bitrate
             .audioBitrate('128k')
             // set audio codec
@@ -94,6 +90,9 @@ app.post('/mp3', function (req, res) {
             .pipe(res, {end: true});
     });
 });
+
+// Server index.html as static file
+app.use('/', express.static(__dirname + '/'));
 
 app.listen(PORT);
 

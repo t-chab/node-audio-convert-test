@@ -1,17 +1,27 @@
 {
   "name": "node-audio-convert-test",
-  "version": "0.0.1",
   "description": "Simple Express http server to convert audio files to 128k mp3",
   "main": "index.js",
+  "author": "tchabaud",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "brunch watch --server",
+    "test": "brunch test"
+  },
   "dependencies": {
     "fluent-ffmpeg": "^2.0.0-rc3",
     "express": "^4.11.1",
-    "jade": "^1.9.1"
+    "jade": "^1.9.1",
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "css-brunch": ">= 1.0 < 1.8",
+    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "auto-reload-brunch": ">= 1.0 < 1.8"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  "license": "GPL-3.0+"
 }
+

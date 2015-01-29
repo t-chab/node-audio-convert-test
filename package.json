@@ -26,5 +26,54 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tchabaud/node-audio-convert-test"
+  },
+  "jshintConfig": {
+    "devel": true,
+    "debug": true,
+    "expr": true,
+    "eqnull": true,
+    "nonew": true,
+    "nomen": true,
+    "curly": true,
+    "latedef": "nofunc",
+    "maxdepth": 4,
+    "unused": true,
+    "noarg": true,
+    "trailing": true,
+    "indent": 4,
+    "forin": true,
+    "noempty": true,
+    "quotmark": "single",
+    "maxparams": 5,
+    "maxstatements": 80,
+    "eqeqeq": true,
+    "undef": true,
+    "bitwise": true,
+    "newcap": true,
+    "immed": true,
+    "onevar": true,
+    "camelcase": true,
+    "maxcomplexity": 12,
+    "nonbsp": true,
+    "maxlen": 140,
+    "freeze": true,
+    "browser": true,
+    "jquery": true,
+    "browser" : true, // Standard browser globals e.g. `window`, `document`.
+    "node" : true,
+    "rhino" : false,
+    "couch" : false,
+    "wsh" : false, // Windows Scripting Host.
+    "jquery" : true,
+    "prototypejs" : false,
+    "mootools" : false,
+    "dojo" : false,
+    "predef" : [ // Extra globals.
+      "_",
+      "define",
+      "require",
+      "console",
+      "$"
+    ]
   }
 }
